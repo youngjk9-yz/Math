@@ -11,7 +11,7 @@ export interface SkillProgress {
 
 export type ProgressMap = Record<string, SkillProgress>;
 
-const STORAGE_KEY = "kumon_math_progress_v1";
+const STORAGE_KEY = "advanone_math_progress_v1";
 
 export function loadProgress(): ProgressMap {
   if (typeof window === "undefined") return {};

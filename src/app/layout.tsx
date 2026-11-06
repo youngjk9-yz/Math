@@ -3,9 +3,9 @@ import "./globals.css";
 import "katex/dist/katex.min.css";
 
 export const metadata: Metadata = {
-  title: "KumonFlow Math | Infinite Grade-Level Mastery & Efficient Solutions",
+  title: "Advanone | 6th Grade Math Curriculum",
   description:
-    "Kumon-style infinite math practice organized by grade level and micro-skill, featuring step-by-step most efficient solution keys.",
+    "Advanone 6th Grade Math Curriculum — simple, structured math practice with step-by-step solutions.",
 };
 
 export default function RootLayout({
