@@ -27,6 +27,7 @@ interface PracticeWorkspaceProps {
   progress: ProgressMap;
   onUpdateProgress: (next: ProgressMap) => void;
   onBackToCurriculum: () => void;
+  onOpenExamples?: () => void;
   onSelectSkill: (skill: SkillDefinition) => void;
 }
 
@@ -43,6 +44,7 @@ export function PracticeWorkspace({
   progress,
   onUpdateProgress,
   onBackToCurriculum,
+  onOpenExamples,
   onSelectSkill,
 }: PracticeWorkspaceProps) {
   const [practiceMode, setPracticeMode] = useState<"drill" | "worksheet">("drill");
@@ -213,6 +215,15 @@ export function PracticeWorkspace({
         </div>
 
         <div className="flex items-center gap-2.5">
+          {onOpenExamples && (
+            <button
+              type="button"
+              onClick={onOpenExamples}
+              className="px-2.5 py-1.5 rounded-lg text-xs font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 transition"
+            >
+              Example & Guide
+            </button>
+          )}
           <span className="text-xs text-slate-500 font-medium">
             Streak: <strong className="text-slate-900">{skillProgress.currentStreak}/{skill.masteryStreak}</strong>
           </span>
